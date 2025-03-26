@@ -14,7 +14,7 @@ const navigateToSignup = () => {
 const handleSubmit = async () => {
   error.value = '';
   try {
-    const response = await fetch('http://51.20.142.143:8000/api/auth/login', {
+    const response = await fetch('https://mydoxai.work.gd/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
