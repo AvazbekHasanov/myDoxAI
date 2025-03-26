@@ -79,7 +79,7 @@ onMounted(() => {
     userId.value = payload.userId.toString();
     userEmail.value = payload.email;
 
-    fetch(`http://51.20.142.143:8000/api/doc/get-all/${userId.value}`, {
+    fetch(`https://mydoxai.work.gd/api/doc/get-all/${userId.value}`, {
       method: "GET",
       headers: {
         "Accept": "application/json",
@@ -181,7 +181,7 @@ onMounted(() => {
                   <ul class="pl-4">
                     <li v-for="doc in category.documents" :key="doc.documentId" 
                         class="py-1 hover:bg-blue-700 rounded cursor-pointer">
-                      <a @click.prevent="() => window.open(`http://51.20.142.143:8000/api/doc/view/${doc.documentId}`, '_blank')" 
+                      <a @click.prevent="() => window.open(`https://mydoxai.work.gd/api/doc/view/${doc.documentId}`, '_blank')" 
                          class="flex items-center gap-2 cursor-pointer">
                           <i class="pi pi-file text-sm"></i>
                           <span class="text-sm">{{ doc.name }}</span>
