@@ -26,7 +26,7 @@ const handleSubmit = async () => {
 
   try {
     console.log('Sending signup request...');
-    const response = await fetch('https://mydoxai.work.gd/api/auth/signup', {
+    const response = await fetch('https://mydoxaiuz.work.gd/api/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
