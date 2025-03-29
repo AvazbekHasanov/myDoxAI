@@ -87,7 +87,7 @@ export default {
       const { userId } = JSON.parse(jsonPayload);
 
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", `https://mydoxai.work.gd/api/doc/upload/${userId}`, true);
+      xhr.open("POST", `https://mydoxaiuz.work.gd/api/doc/upload/${userId}`, true);
       // xhr.setRequestHeader('Authorization', `Bearer ${token}`);
       
 
@@ -125,7 +125,7 @@ export default {
       analysisResult.value = null;
       error.value = '';
 
-      fetch(`https://mydoxai.work.gd/api/doc/analyse/${fileData.value.id}`, {
+      fetch(`https://mydoxaiuz.work.gd/api/doc/analyse/${fileData.value.id}`, {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -148,7 +148,7 @@ export default {
             analysisResult.value = data;
             
             // After successful analysis, classify the document
-            return fetch(`https://mydoxai.work.gd/api/doc/classify/${fileData.value.id}`, {
+            return fetch(`https://mydoxaiuz.work.gd/api/doc/classify/${fileData.value.id}`, {
               method: "POST",
               headers: {
                 "Accept": "application/json",
@@ -209,7 +209,7 @@ export default {
         return;
       }
 
-      const url = `https://mydoxai.work.gd/api/doc/view/${analysisResult.value.documentId}`;
+      const url = `https://mydoxaiuz.work.gd/api/doc/view/${analysisResult.value.documentId}`;
       const newTab = window.open('', '_blank');
       
       fetch(url, {
